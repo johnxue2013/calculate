@@ -10,26 +10,24 @@ import com.sbtufss.calculate.enums.SymbolPriority;
  */
 public class DivideSymbol extends Symbol {
 
-	@Override
-	public String flag() {
-		return "/";
-	}
+    @Override
+    public String flag() {
+        return "/";
+    }
 
-	@Override
-	public SymbolPriority priority() {
-		return SymbolPriority.DIVIDE;
-	}
+    @Override
+    public SymbolPriority priority() {
+        return SymbolPriority.DIVIDE;
+    }
 
-	@Override
-	public int numOfSymbol() {
-		return 2;
-	}
+    @Override
+    public int numOfSymbol() {
+        return 2;
+    }
 
-	@Override
-	public double cal(double[] values) {
-		// TODO Auto-generated method stub
-		return values[0] / values[1];
-	}
-
+    @Override
+    public double cal(double[] values) {
+        return values[0] / values[1];
+    }
 
 }

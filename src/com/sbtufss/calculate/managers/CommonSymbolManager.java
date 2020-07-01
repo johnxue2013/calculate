@@ -14,14 +14,13 @@ import com.sbtufss.calculate.symbols.ReduceSymbol;
  */
 public class CommonSymbolManager extends SymbolManager {
 
-	public CommonSymbolManager() {
-		super();
-		list.add(new PlusSymbol());
-		list.add(new ReduceSymbol());
-		list.add(new MultSymbol());
-		list.add(new DivideSymbol());
-		list.add(new MathPowSymbol());
-	}
+    public CommonSymbolManager() {
+        super();
+        list.add(new PlusSymbol());
+        list.add(new ReduceSymbol());
+        list.add(new MultSymbol());
+        list.add(new DivideSymbol());
+        list.add(new MathPowSymbol());
+    }
 
-	
 }

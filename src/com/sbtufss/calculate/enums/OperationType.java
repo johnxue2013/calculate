@@ -7,13 +7,13 @@ package com.sbtufss.calculate.enums;
  * 
  */
 public enum OperationType {
-	/**
-	 * 操作值
-	 */
-	VALUE,
-	/**
-	 * 操作符
-	 */
-	SYMBOL;
+    /**
+     * 操作值
+     */
+    VALUE,
+    /**
+     * 操作符
+     */
+    SYMBOL;
 
 }
