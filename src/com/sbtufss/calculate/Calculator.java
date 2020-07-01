@@ -59,7 +59,7 @@ public class Calculator {
 
         // 计算结果
         Operation operation;
-        for (int i = 0; operationsBo[i] != null; i++) {
+        for (int i = 0; i < operationsBo.length && operationsBo[i] != null; i++) {
             operation = operationsBo[i];
             if (operation.getType() == OperationType.VALUE) {
                 stack.push(operation);
@@ -112,6 +112,7 @@ public class Calculator {
      * 47斜杠(除号)
      * 48 数字0
      * 57 数字9
+     * 94 符号^
      * 
      * @param str
      * @return
@@ -132,12 +133,12 @@ public class Calculator {
                     // 负数(如果lastC为左括号，c为减号或者负号(减号)
                     // 那就直接append到sb里面
                     sb.append(c);
-                } else if (c == 40 || c == 41 || c == 42 || c == 43 || c == 45 || c == 47) {
+                } else if (c == 40 || c == 41 || c == 42 || c == 43 || c == 45 || c == 47 || c == 94) {
                     // 如果是左括号 右括号 乘号 加号 减号 除号
                     // 则空格隔开，在append到sb里面
                     sb.append(" ").append(c).append(" ");
                 } else if (c == 44) {
-                    // 如果是","那就不append到里卖弄，用空格隔开，是这种情况Math.pow(2,3)
+                    // 如果是","那就不append到里弄，用空格隔开，是这种情况Math.pow(2,3)
                     sb.append(" ");
                 } else {
                     // 其他字符直接append到sb里面
